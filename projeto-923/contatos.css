@@ -1,0 +1,96 @@
+
+.contato-section {
+  padding: 60px 20px;
+  background: #ffe0c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.contato-container {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contato-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.contato-section h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 26px;
+  color: #333;
+  font-weight: 600;
+}
+
+.contato-section p {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Formulário */
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contato-form input,
+.contato-form textarea {
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  resize: none;
+  transition: border-color 0.3s;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+  outline: none;
+  border-color: #ff914d;
+}
+
+/* Botão enviar */
+.btn-enviar {
+  background: #ff914d;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-enviar:hover {
+  background: #ff6b1a;
+  transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .contato-container {
+    padding: 30px 20px;
+  }
+
+  .contato-section h2 {
+    font-size: 22px;
+  }
+
+  .contato-section p {
+    font-size: 14px;
+  }
+}
