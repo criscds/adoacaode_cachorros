@@ -1,158 +1,212 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-  background-color: #8f4a14;
-  color: #fff;
+  background: #ff914d;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
 }
 
 header .logo {
-  font-size: 1.8em;
+  font-size: 24px;
   font-weight: bold;
+  color: white;
 }
 
-header nav ul {
+nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-header nav ul li a {
-  color: #fff;
+nav a {
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-header nav ul li a:hover,
-header nav ul li a.ativo {
-  text-decoration: underline;
+nav a.ativo {
+  border-bottom: 2px solid white;
 }
 
-body {
-  padding-top: 70px;
-}
 
 .hero-section {
-  background: #d87700;
-  color: #fff;
   text-align: center;
   padding: 80px 20px;
-}
-
-.hero-section h1 {
-  font-size: 2.5em;
-  margin-bottom: 15px;
-}
-
-.hero-section p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+  background: #ffe0c2;
 }
 
 .hero-section .btn {
-  background-color: #fff;
-  color: #b66700;
-  padding: 10px 20px;
-  border-radius: 5px;
+  display: inline-block;
+  background: #ff914d;
+  padding: 12px 25px;
+  color: white;
   text-decoration: none;
-  font-weight: bold;
+  margin-top: 20px;
+  border-radius: 8px;
 }
 
-.hero-section .btn:hover {
-  background-color: #f3e3d0;
-}
 
 .produto-section {
-  padding: 60px 20px;
-  background-color: #f1f1f1;
-}
-
-.produto-section h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #d0810ca5;
+  padding: 40px 20px;
+  background: #fff6ed;
 }
 
 .produtos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
 }
 
 .produto-card {
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  width: 220px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
 }
 
 .produto-card img {
+  width: 100%;
   border-radius: 8px;
-  margin-bottom: 10px;
 }
 
-.produto-card h3 {
-  margin-bottom: 5px;
-  color: #8f4a14;
-}
-
-.produto-card p {
-  color: #b66d00;
-  font-weight: bold;
-  margin-bottom: 10px;
+.produto-card:hover {
+  transform: scale(1.05);
 }
 
 .btn-adotar {
-  background-color: #d87700;
+  background: #ff914d;
   color: white;
   border: none;
-  padding: 8px 15px;
-  border-radius: 5px;
+  padding: 10px 20px;
+  border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
+  margin-top: 10px;
 }
 
 .btn-adotar:hover {
-  background-color: #a35a10d8;
+  background: #ff6b1a;
 }
+
+
+.adotado {
+  border: 3px solid #4caf50;
+  background: #eaffea;
+}
+
 
 footer {
-  background-color: #a35a10d8;
-  color: #fff;
   text-align: center;
   padding: 15px;
-  margin-top: 40px;
+  background: #c3590e;
+  color: white;
+  margin-top: 30px;
 }
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 10px;
+
+.contato-section {
+  padding: 60px 20px;
+  background: #ffe0c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.contato-container {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contato-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.contato-section h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 26px;
+  color: #333;
+  font-weight: 600;
+}
+
+.contato-section p {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contato-form input,
+.contato-form textarea {
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  resize: none;
+  transition: border-color 0.3s;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+  outline: none;
+  border-color: #ff914d;
+}
+
+
+.btn-enviar {
+  background: #ff914d;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-enviar:hover {
+  background: #ff6b1a;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 600px) {
+  .contato-container {
+    padding: 30px 20px;
   }
 
-  .produtos {
-    flex-direction: column;
-    align-items: center;
+  .contato-section h2 {
+    font-size: 22px;
   }
 
-  .produto-card {
-    width: 90%;
-    max-width: 300px;
+  .contato-section p {
+    font-size: 14px;
   }
 }
+
+
